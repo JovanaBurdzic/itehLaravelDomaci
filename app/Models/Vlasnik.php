@@ -11,6 +11,13 @@ class Vlasnik extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'ime',
+        'prezime',
+        'jmbg',
+        'grad_id'
+    ];
+
     public function grad()
     {
         return $this->belongsTo(Grad::class);

@@ -10,6 +10,12 @@ class Grad extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'ime',
+        'drzava',
+        'brojStanovnika'
+    ];
+
     public function vlasnici()
     {
         return $this->hasMany(Vlasnik::class);

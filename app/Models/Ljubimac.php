@@ -10,6 +10,14 @@ class Ljubimac extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'tip',
+        'rasa',
+        'ime',
+        'godine',
+        'vlasnik_id'
+    ];
+
     public function vlasnik()
     {
         return $this->belongsTo(Vlasnik::class);
