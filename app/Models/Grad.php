@@ -9,4 +9,9 @@ use App\Models\Vlasnik;
 class Grad extends Model
 {
     use HasFactory;
+
+    public function vlasnici()
+    {
+        return $this->hasMany(Vlasnik::class);
+    }
 }
